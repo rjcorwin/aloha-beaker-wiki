@@ -18,9 +18,9 @@ async function saveIt() {
     console.log(i)
   }
   // Debounce as to not overload network on very fast key strokes.
-  setTimeout(saveIt, 500)
+  // setTimeout(saveIt, 500)
 }
-saveIt()
+setInterval(saveIt, 5000)
 
 // Templates
 var docTop = `
@@ -31,7 +31,10 @@ var docTop = `
       <title>Getting Started with Aloha Editor</title>
       <link rel="stylesheet" href="index.css" type="text/css">
       <!-- Load Aloha Editor css and js -->
-      <link rel="stylesheet" href="/javascripts/aloha/css/aloha.css" type="text/css">
+      <link rel="stylesheet" href="/javascripts/aloha/css/aloha-common-extra.css" type="text/css">
+      <link rel="stylesheet" href="/javascripts/aloha/css/aloha-core.css" type="text/css">
+      <link rel="stylesheet" href="/javascripts/aloha/css/aloha-reset.css" type="text/css">
+      <link rel="stylesheet" href="/javascripts/aloha/css/aloha-sidebar.css" type="text/css">
       <script src="/javascripts/aloha/lib/require.js"></script>
       <script src="/javascripts/aloha/lib/aloha.js"
         data-aloha-plugins="common/ui,common/format,common/highlighteditables,common/link"></script>
